@@ -25,7 +25,14 @@ The recipe runs `pip install -e .`, so run it from the repository root.
 Alternatively, install this package using `pip install .` in Python 3.10.12+.
 
 A tested two-environment setup for all nine models is documented in
-[最小环境与九模型验收](docs/minimal_environment_zh.md).
+[最小环境与九模型验收](docs/minimal_environment_zh.md): **screen-core + masif**.
+It now includes a portable `scripts/screen.sh` launcher, a
+[`config.screen-core.json`](examples/config.screen-core.json) template, observed
+package inventories and explicit APBS binary/shared-library requirements.
+Validation covers public 1UBQ plus 10 private designs across two GPU nodes
+(90/90 model statuses passed after a Pro4S dependency repair and targeted retry).
+See the guide for the validated clone workflow; the bootstrap YAML is not a
+complete or validated fresh installation of all third-party models.
 
 ## Try without model weights
 

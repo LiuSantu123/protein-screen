@@ -65,3 +65,14 @@ are included in either distribution.
 The subsequent two-environment run passed all nine models on public 1UBQ.
 See [the compatibility recipe and results](minimal_environment_zh.md);
 the v0.1.0 validation above remains the historical release record.
+
+## Subsequent two-environment validation (2026-09-08)
+
+The main branch additionally passed all nine models on public 1UBQ and 10 private
+designs split between two Linux GPU nodes. The latter yielded 90/90 successful
+model statuses and 120 finite primary metrics after repairing APBS shared-library
+resolution on one node and retrying only Pro4S. This is not an all-success initial
+run or a same-design cross-node reproducibility test. Private inputs and scores
+are not distributed. See [environment report](minimal_environment_zh.md) for
+requirements, numerical comparisons and installation limitations. The original
+v0.1.0 release validation above remains a historical record.

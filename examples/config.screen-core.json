@@ -1,0 +1,40 @@
+{
+  "paths": {
+    "netsolp": "$SCREEN_MODELS/NetSolP/PredictionServer/predict.py",
+    "netsolp_models": "$SCREEN_MODELS/NetSolP/PredictionServer/models",
+    "temberture_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "temstapro_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "temstapro": "$SCREEN_COMPAT/temstapro",
+    "temstapro_dir": "$SCREEN_MODELS/TemStaPro",
+    "prottrans": "$SCREEN_MODELS/TemStaPro/ProtTrans",
+    "rp3_src": "$SCREEN_MODELS/RP3Net/src",
+    "rp3_repo": "$SCREEN_MODELS/RP3Net",
+    "rp3_ckpt": "$SCREEN_MODELS/RP3Net/weights/rp3net_v0.1_d.ckpt",
+    "esmc_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "esm3_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "evoef2": "$SCREEN_MODELS/EvoEF2/EvoEF2",
+    "gatsol_ckpt": "$SCREEN_MODELS/GATSol/check_point/best_model/best_model.tar.gz",
+    "gatsol_repo": "$SCREEN_MODELS/GATSol",
+    "gatsol_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "pro4s_root": "$SCREEN_MODELS/Pro4S",
+    "pro4s_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "masif_py": "$SCREEN_MASIF_PREFIX/bin/python",
+    "netsolp_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "rp3net_py": "$SCREEN_CORE_PREFIX/bin/python",
+    "temberture_models": "$SCREEN_MODELS/TemBERTure/temBERTure"
+  },
+  "env": {
+    "esmc": {
+      "PYTHONPATH": "$SCREEN_ESM_SDK",
+      "HF_HUB_CACHE": "$SCREEN_HF_CACHE"
+    },
+    "esm3": {
+      "PYTHONPATH": "$SCREEN_ESM_SDK",
+      "HF_HUB_CACHE": "$SCREEN_HF_CACHE"
+    },
+    "temberture": {
+      "PYTHONPATH": "$SCREEN_MODELS/TemBERTure/temBERTure",
+      "TEMBERTURE_BASE_MODEL": "$SCREEN_PROTBERT"
+    }
+  }
+}

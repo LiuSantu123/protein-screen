@@ -1,6 +1,7 @@
 # Apply to a working Python 3.10 / Torch 2.5.1 screening installation clone.
 # This is a consolidation overlay, not a complete fresh-install lock.
-torch==2.5.1
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.5.1+cu118
 transformers==4.46.3
 numpy==1.26.4
 adapters @ https://github.com/adapter-hub/adapters/archive/702381ed5c581af3c488ce7e8663b3d94f0fac42.tar.gz

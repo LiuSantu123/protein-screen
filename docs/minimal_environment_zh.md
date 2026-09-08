@@ -3,7 +3,7 @@
 目标是保留全部九个评分模型、原权重和 Pro4S 表面预处理，尽量合并 Python/PyTorch 安装。
 **本次实际验证的最少配置为两个 conda 环境。**
 独立 `screen-core` 主控启动的九模型统一运行全部成功（9/9，退出码 0）；
-主环境 `pip check` 无冲突、14 项 unittest 全通过。输入为公开 1UBQ 单条蛋白。
+主环境 `pip check` 无冲突、14 项 unittest 全通过。公开 1UBQ 验收后，追加两台 Linux GPU 节点的10设计批量验证：90/90模型状态通过，120个主要指标有效（其中一节点修复APBS依赖后仅补跑Pro4S）。
 
 | 运行部分 | 已验证运行环境 |
 |---|---|
@@ -113,3 +113,82 @@ ESM3 的 SDK/Torch 组合改变后存在约 0.0304% 数值差异，不宣称逐�
 
 NetSolP 此处使用默认 ESM1b ensemble，与历史同模型 CPU 结果 0.81280947 一致到浮点误差；
 v0.1.0 验收中的 0.8273101 来自 Distilled 配置，不能直接当作同模型环境对照。
+
+## 公开入口与两环境配置
+
+在仓库根目录运行；以下 `/path/to` 都需要替换为实际绝对路径。
+
+```bash
+conda activate screen-core
+export SCREEN_CORE_PREFIX="$CONDA_PREFIX"
+export SCREEN_MASIF_PREFIX=/path/to/conda/envs/masif
+export SCREEN_MODELS=/path/to/model-repositories
+export SCREEN_COMPAT="$PWD/.local/temstapro-compat"
+export SCREEN_ESM_SDK="$PWD/.local/esm-sdk-3.1.1"
+export SCREEN_HF_CACHE=/path/to/huggingface/hub
+export SCREEN_PROTBERT=/path/to/complete/prot_bert_bfd/snapshot
+export SCREEN_APBS_ROOT=/path/to/apbs15
+mkdir -p .local
+cp examples/config.screen-core.json .local/config.json
+bash scripts/screen.sh doctor
+bash scripts/screen.sh run examples/1ubq.fasta examples/1ubq.pdb \
+  --models netsolp rp3net temberture temstapro esmc esm3 gatsol pro4s evoef2 \
+  --device cuda -o output/1ubq.csv
+```
+
+模板假定模型目录名为 NetSolP、RP3Net、TemBERTure、TemStaPro、GATSol、Pro4S、EvoEF2；
+按自己的安装修改 JSON。所有变量必须先设置；`env` 中的路径使用绝对路径。
+ESMC 和 ESM3 可在 JSON 中分别指定不同的缓存目录，均需完整权重。
+`SCREEN_CONFIG` 可覆盖配置文件位置，`SCREEN_PYTHON` 可指定 screen-core 的绝对解释器路径；
+脚本默认使用当前激活环境的 python，不会自动激活或创建 conda 环境。
+直接使用 `protein-screen run` 时，需自行传入 `--config`、`--apbs-bin`、`--multivalue-bin`。
+
+## Conda 与原生依赖边界
+
+- 已验证安装路线：克隆现有可运行的 Python 3.10 screening，再应用
+  `envs/minimal-core-requirements.txt`；Torch明确固定为CUDA11.8构建 `2.5.1+cu118`。
+- `envs/screen-core-bootstrap.yml` 仅创建 Python 与合并依赖的起始环境，
+  运行命令为 `conda env create -f envs/screen-core-bootstrap.yml`（仓库根目录）。
+  尚未从空白环境验收；仍需第三方模型依赖、DGL兼容处理、模型源码和权重。
+- `envs/screen-core-observed.tsv`、`envs/masif-observed.tsv` 记录实测环境的包名、版本、构建。
+  这是环境盘点，不是锁文件；不能恢复本机二进制补丁、editable源码或外置SDK。
+- masif继续复用已工作的Python3.7/PyMesh环境；未提供声称可从零重建的MaSIF配方。
+  使用上游支持的旧环境，并验收完整表面预处理。
+- EvoEF2、MSMS、PDB2PQR、APBS与multivalue是外置原生/命令行依赖，不计为额外conda环境。
+
+APBS必须使用**匹配的二进制和动态库**。本次APBS1.5目录结构为：
+
+```text
+apbs15/
+  bin/apbs
+  bin/multivalue
+  lib/libapbs_routines.so
+  lib/libapbs_generic.so
+  lib/libapbs_mg.so
+  lib/libapbs_pmgc.so
+  lib/libmaloc.so
+```
+
+在每个计算节点检查：
+
+```bash
+LD_LIBRARY_PATH="$SCREEN_APBS_ROOT/lib:${LD_LIBRARY_PATH:-}" ldd "$SCREEN_APBS_ROOT/bin/apbs"
+LD_LIBRARY_PATH="$SCREEN_APBS_ROOT/lib:${LD_LIBRARY_PATH:-}" ldd "$SCREEN_APBS_ROOT/bin/multivalue"
+```
+
+不应存在 `not found`。Pro4S runner会把multivalue相邻的lib/lib64加入子进程动态库路径；
+不要依赖某台节点的临时目录或系统loader配置。缺库时可能先生成DX文件，随后缺少电荷CSV，
+最终报 `masif_no_surface`。`doctor`仅检查配置路径，不能替代这些原生依赖检查。
+第三方二进制和库需按各自许可证安装，本仓库不分发。
+
+## 10设计双节点补充验收
+
+2026-09-08：私有历史测试集抽取10条66–269 aa设计，两个节点各跑5条不同设计。
+节点A一次完成45/45，耗时282秒；节点B初跑八模型成功，Pro4S因multivalue缺少动态库失败，
+初跑退出码2；配置共享APBS1.5后仅补跑Pro4S，5/5成功、退出码0。
+最终90/90状态ok、120个主要数值有限；保留初跑失败记录并明确补跑来源，合并后重算10设计排名。
+这不是同一设计跨节点重复实验。私有序列、结构、设计ID及原始结果未公开。
+
+与历史同序列评分对照，最大相对差异：ESM3 0.194325%、ESMC 0.169139%、Pro4S 0.001477%；
+EvoEF2、TemStaPro及TemBERTure分类分数完全一致。其余指标最大相对差异小于0.0011%。
+差异可能同时受SDK、计算设置与结构处理影响；此次验证不证明生物学预测准确性或任意旧环境均可删除。
