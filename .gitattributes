@@ -1,0 +1,3 @@
+# PDB uses fixed-width records; retain the original public data bytes.
+*.pdb -text whitespace=-blank-at-eol
+*.csv text whitespace=cr-at-eol

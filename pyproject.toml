@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protein-screen-toolkit"
+version = "0.1.0"
+description = "Configurable multi-model screening of protein sequences and structures"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "LiuSantu123"}]
+dependencies = ["gemmi>=0.6.7,<0.8", "openpyxl>=3.1,<4", "h5py>=3.10,<4"]
+
+[project.scripts]
+protein-screen = "protein_screen.cli:main"
+
+[project.urls]
+Repository = "https://github.com/LiuSantu123/protein-screen"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+target-version = ['py311']

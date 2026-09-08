@@ -1,0 +1,34 @@
+{
+  "paths": {
+    "netsolp": "models/netsolp",
+    "netsolp_models": "models/netsolp_models",
+    "temberture_py": "~/miniconda3/envs/temberture/bin/python",
+    "temstapro_py": "~/miniconda3/envs/temstapro/bin/python",
+    "temstapro": "models/temstapro",
+    "temstapro_dir": "models/temstapro_dir",
+    "prottrans": "models/prottrans",
+    "rp3_src": "models/rp3_src",
+    "rp3_repo": "models/rp3_repo",
+    "rp3_ckpt": "models/rp3_ckpt",
+    "esmc_py": "~/miniconda3/envs/esm/bin/python",
+    "esm3_py": "~/miniconda3/envs/esm/bin/python",
+    "evoef2": "../external/EvoEF2/EvoEF2",
+    "gatsol_ckpt": "models/gatsol_ckpt",
+    "gatsol_repo": "models/gatsol_repo",
+    "gatsol_py": "~/miniconda3/envs/screen-models/bin/python",
+    "pro4s_root": "models/pro4s_root",
+    "pro4s_py": "~/miniconda3/envs/screen-models/bin/python",
+    "masif_py": "~/miniconda3/envs/masif/bin/python",
+    "netsolp_py": "~/miniconda3/envs/screen-models/bin/python",
+    "rp3net_py": "~/miniconda3/envs/screen-models/bin/python",
+    "temberture_models": "models/temberture_models"
+  },
+  "env": {
+    "esmc": {
+      "HF_HOME": "~/.cache/huggingface"
+    },
+    "esm3": {
+      "HF_HOME": "~/.cache/huggingface"
+    }
+  }
+}

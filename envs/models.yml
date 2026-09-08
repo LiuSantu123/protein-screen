@@ -1,0 +1,31 @@
+# Modern inference starting point for RP3Net/GATSol/Pro4S.
+# Install the upstream repository requirements and model weights separately.
+# This recipe is not a lockfile and does not include legacy MaSIF or ESM SDK.
+name: screen-models
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch==2.5.1
+      - torch-geometric==2.5.3
+      - numpy==2.2.6
+      - scipy==1.15.3
+      - pandas==2.3.3
+      - biopython==1.85
+      - transformers==4.46.3
+      - lightning==2.1.4
+      - pytorch-lightning==2.6.5
+      - torchmetrics==1.9.0
+      - ml-collections==1.1.0
+      - peft==0.17.1
+      - tqdm>=4.66
+      - onnxruntime>=1.18
+      - fair-esm==2.0.0
+      - scikit-learn==1.7.2
+      - h5py==3.16.0
+      - openpyxl==3.1.5
+      - gemmi==0.7.5
+      - plyfile==1.1.5

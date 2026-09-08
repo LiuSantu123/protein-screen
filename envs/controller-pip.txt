@@ -1,0 +1,6 @@
+# Controller runtime packages tested on Linux x86_64 / Python 3.11.16.
+gemmi==0.7.5
+h5py==3.16.0
+numpy==2.4.6
+openpyxl==3.1.5
+et-xmlfile==2.0.0
