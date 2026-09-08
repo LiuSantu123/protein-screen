@@ -202,7 +202,11 @@ def predict_tm_ensemble(
         print(f"  加载Tm模型 {i}/{len(tm_model_paths)}: {model_path}")
         try:
             model = TemBERTure(
-                adapter_path=model_path, device=device, batch_size=16, task="regression"
+                adapter_path=str(Path(model_path)) + os.sep,
+                model_name=os.environ.get("TEMBERTURE_BASE_MODEL", "Rostlab/prot_bert_bfd"),
+                device=device,
+                batch_size=16,
+                task="regression",
             )
             tm_models.append(model)
         except Exception as e:
@@ -213,7 +217,8 @@ def predict_tm_ensemble(
     print(f"  加载分类模型: {cls_model_path}")
     try:
         cls_model = TemBERTure(
-            adapter_path=cls_model_path,
+            adapter_path=str(Path(cls_model_path)) + os.sep,
+            model_name=os.environ.get("TEMBERTURE_BASE_MODEL", "Rostlab/prot_bert_bfd"),
             device=device,
             batch_size=1,
             task="classification",

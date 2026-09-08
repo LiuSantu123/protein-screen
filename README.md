@@ -19,10 +19,13 @@ protein-screen --version
 
 The conda environment installs the **controller, structure parser and result
 readers**. Model repositories, model environments and weights are installed
-separately; they are not bundled. Existing installations can be reused. This
-separation is required by incompatible ESM/TemBERTure/MaSIF dependencies.
+separately; they are not bundled. Existing installations can be reused. The default
+recipe does not attempt to consolidate upstream model dependencies.
 The recipe runs `pip install -e .`, so run it from the repository root.
-Alternatively, install this package using `pip install .` in Python 3.11+.
+Alternatively, install this package using `pip install .` in Python 3.10.12+.
+
+A tested two-environment setup for all nine models is documented in
+[最小环境与九模型验收](docs/minimal_environment_zh.md).
 
 ## Try without model weights
 

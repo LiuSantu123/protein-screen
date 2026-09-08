@@ -7,6 +7,7 @@ import math
 import re
 import sys
 import os
+import inspect
 from pathlib import Path
 from typing import Any
 
@@ -113,10 +114,13 @@ def load_esmc_model(model_name: str, device: Any, use_flash_attn: bool) -> Any:
         )
 
     try:
+        loader_options = {}
+        if "use_flash_attn" in inspect.signature(ESMC.from_pretrained).parameters:
+            loader_options["use_flash_attn"] = use_flash_attn
         model = ESMC.from_pretrained(
             model_name,
             device=device,
-            use_flash_attn=use_flash_attn,
+            **loader_options,
         )
     except Exception as exc:
         # The installed SDK may still call snapshot_download even when the
@@ -166,12 +170,15 @@ def load_esmc_model(model_name: str, device: Any, use_flash_attn: bool) -> Any:
             },
         }
         spec = specs[model_name]
+        constructor_options = {}
+        if "use_flash_attn" in inspect.signature(ESMC).parameters:
+            constructor_options["use_flash_attn"] = use_flash_attn
         model = ESMC(
             d_model=spec["d_model"],
             n_heads=spec["n_heads"],
             n_layers=spec["n_layers"],
             tokenizer=get_esmc_model_tokenizers(),
-            use_flash_attn=use_flash_attn,
+            **constructor_options,
         ).eval()
         cache_roots = [
             Path(

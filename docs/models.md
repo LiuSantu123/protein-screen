@@ -60,6 +60,10 @@ Supported checkpoint archives contain regular files/directories only.
 - **TemBERTure:** follow the upstream installation for `temBERTure`, including
   its adapter-transformers stack. Obtain three Tm replicas plus the classification
   model. The integration passes these paths to the bundled ensemble runner.
+  Make the upstream `temBERTure` module importable (for example via
+  `env.temberture.PYTHONPATH`). Set `env.temberture.TEMBERTURE_BASE_MODEL` to
+  a complete local ProtBERT-BFD directory for offline loading; otherwise the
+  upstream `Rostlab/prot_bert_bfd` model ID is used.
 - **TemStaPro:** follow upstream installation and download its ProtTrans encoder
   and classifier weights; set all four keys in the table.
 - **ESM:** install the upstream `esm` SDK in a separate compatible environment.

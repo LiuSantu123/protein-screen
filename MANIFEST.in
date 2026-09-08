@@ -4,3 +4,5 @@ recursive-include envs *.yml
 recursive-include examples *.csv *.fasta *.pdb *.json *.slurm
 recursive-include tests *.py
 recursive-include envs *.lock *.txt
+
+recursive-include scripts *.py

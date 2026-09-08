@@ -59,3 +59,9 @@ wheel was installed into a separate target directory; import location was
 verified, and both the ranking example and real EvoEF2 inference passed using
 the installed wheel. No private configuration, weights or experimental records
 are included in either distribution.
+
+## Subsequent environment consolidation
+
+The subsequent two-environment run passed all nine models on public 1UBQ.
+See [the compatibility recipe and results](minimal_environment_zh.md);
+the v0.1.0 validation above remains the historical release record.
