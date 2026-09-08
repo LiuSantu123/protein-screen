@@ -1,0 +1,745 @@
+{
+  "NetSolP": {
+    "repository": "teevee112/NetSolP-1.0",
+    "revision": "2b46f418d240f09e143e497b100662d90f46f124",
+    "license": "BSD-3-Clause",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "28b8a66d647792b338bb7fab533b2f0084d39d05515ca70a7c075403dc1672f2"
+      },
+      {
+        "path": "PredictionServer/README",
+        "sha256": "b982d19c5b75407401a9bdf6091a929dee3ae3b7d003e03647d9928304725c5a"
+      },
+      {
+        "path": "PredictionServer/data.py",
+        "sha256": "f7f06e4dfec467c598d3879629fb772be2eb9983f6251f43b67a028a4e35abc1"
+      },
+      {
+        "path": "PredictionServer/predict.py",
+        "sha256": "4f0c76ccbfcb412397a312a106835388c50f65e0c8aea86ff5fbc6c7d43341f0"
+      },
+      {
+        "path": "PredictionServer/predict_fold.py",
+        "sha256": "c02b8bdad362b4f2f12c184a0711cc470ec4914e1329fc7f6762e0a77985e19a"
+      },
+      {
+        "path": "PredictionServer/requirements_cpu.txt",
+        "sha256": "b7d1d9024e0e5761929fbe63df517fe05bc82969badcf884b1b25f61e0560865"
+      },
+      {
+        "path": "PredictionServer/requirements_gpu.txt",
+        "sha256": "f290fe555bc3b451d37b7ba11f9791acc6edcf80b1e121e48b3fcf5b1099ace0"
+      },
+      {
+        "path": "README.md",
+        "sha256": "0c981d9f7b80cba54e1c9b5664ba1cfc690394f4d52e98f0f31cddd75067d840"
+      }
+    ],
+    "assets": [
+      {
+        "path": "PredictionServer/models/ESM12_alphabet.pkl",
+        "git_blob_sha1": "e3ddc1f9f56efbe934e7ed6e1ec1808872a4deb1",
+        "size": 812
+      },
+      {
+        "path": "PredictionServer/models/ESM1b_alphabet.pkl",
+        "git_blob_sha1": "61154cbc3524254222c3cff9b484288bdd797d81",
+        "size": 524
+      }
+    ]
+  },
+  "RP3Net": {
+    "repository": "RP3Net/RP3Net",
+    "revision": "e3f45b6bb53c6df20c4e77ef2c4ff1d346a02862",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "c1c40232e54d6e27432706f579795a820422881fb33a8d073bed9cde37423cbe"
+      },
+      {
+        "path": "README.md",
+        "sha256": "16f639366d33c7a2183a84108578864f52a1fce58b03fad95051261f766181ed"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "71a19558478fca8c141f786e95936a8c127bf1fda9c56e260eb286e6cce857b8"
+      },
+      {
+        "path": "src/RP3Net/__init__.py",
+        "sha256": "256df812e01bda7abaa2e443ee3863feb5530b9ca98118e8ea131d091fba0de4"
+      },
+      {
+        "path": "src/RP3Net/fm_cfg/esm2_650m/config.json",
+        "sha256": "539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b"
+      },
+      {
+        "path": "src/RP3Net/fm_cfg/esm2_650m/special_tokens_map.json",
+        "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+      },
+      {
+        "path": "src/RP3Net/fm_cfg/esm2_650m/tokenizer_config.json",
+        "sha256": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad"
+      },
+      {
+        "path": "src/RP3Net/fm_cfg/esm2_650m/vocab.txt",
+        "sha256": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+      },
+      {
+        "path": "src/RP3Net/model/__init__.py",
+        "sha256": "381f9121b2164faac305f83bfb151c610aa294071887c201b5fc274fe52e1dae"
+      },
+      {
+        "path": "src/RP3Net/model/layers.py",
+        "sha256": "1c8deb9be9ef3ca15c94c55e379c559b887588da5a52431058003d2263caaf0a"
+      },
+      {
+        "path": "src/RP3Net/model/model.py",
+        "sha256": "6b9cf26a8e58602659315769bf15332c0d11a2ad3d10b061e34bd06aece9dd50"
+      },
+      {
+        "path": "src/RP3Net/rp3_main.py",
+        "sha256": "93fde64663f711d74f0fa6974536e53b86865ffb61575bdb56d16832362bf75e"
+      },
+      {
+        "path": "src/RP3Net/rp3_train.py",
+        "sha256": "148bb81b038d02000f5e523e531b5f27aa2f1bae3ec38582d239c54fb8793bbf"
+      },
+      {
+        "path": "src/RP3Net/training/__init__.py",
+        "sha256": "5be366d315a8e319b6ac2b303fcaeb5ea1a271e59d6837053c1207b2f9c2acf1"
+      },
+      {
+        "path": "src/RP3Net/training/cli.py",
+        "sha256": "2df24ef474a140f7a273d9c14a6e963118f1d02e82d3ed6b37b76f57f6c24aa7"
+      },
+      {
+        "path": "src/RP3Net/training/data.py",
+        "sha256": "f6d160533ac09f7595aa27e1c8abdfff562259101059132fe68713276d5c84e7"
+      },
+      {
+        "path": "src/RP3Net/training/data_emlc.py",
+        "sha256": "da0af2121c233412f2eab320fb0612ac70f75864c827cd02b56c9f7c7e85e8af"
+      },
+      {
+        "path": "src/RP3Net/training/lm.py",
+        "sha256": "3a51a1e2f42bc153c5becd6f596c287a8be9fd69133228a6f01f48902824acbf"
+      },
+      {
+        "path": "src/RP3Net/training/lm_emlc.py",
+        "sha256": "2cba20826a20f1a1ef70d1a84c3bd7cf4b025f6cd341e7f54904b2b57699c2ba"
+      },
+      {
+        "path": "src/RP3Net/training/metrics.py",
+        "sha256": "82bf3f03a923651900f1dbca2bfa6e04e2419883bf9e7ac7c63369c4759ffb2f"
+      },
+      {
+        "path": "src/RP3Net/util/__init__.py",
+        "sha256": "21e964412c229c70250f58ef0b3df3fe138b3af94a6278d1ab0a9ec691fe110c"
+      },
+      {
+        "path": "src/RP3Net/util/fasta.py",
+        "sha256": "9651265318b7472d69aaf9049328becd94a88a34f37811699c7aa89ccd5136f6"
+      },
+      {
+        "path": "src/RP3Net/util/torch.py",
+        "sha256": "51c64dde317e5ec9e911b67712001ec3d0cb4b506e349fb49a144717ced7d688"
+      },
+      {
+        "path": "src/RP3Net/util/util.py",
+        "sha256": "0f5f3fa825c41c98b272c05dc107a7af98348d5da05c550786c251897c424556"
+      }
+    ],
+    "assets": []
+  },
+  "TemBERTure": {
+    "repository": "ibmm-unibe-ch/TemBERTure",
+    "revision": "3c17a7a2d2a8365b187f5dec4eb1ed5db6d37f41",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "sha256": "a16fedf8d5801034eed15faed74bfa22828d88dd8d5021a86c98e84b8442b80a"
+      },
+      {
+        "path": "README.md",
+        "sha256": "a70cd68f5d78eeeae58d0f5d70bc94237278e83b7d471fe187324868fc0ebce6"
+      },
+      {
+        "path": "temBERTure/temBERTure.py",
+        "sha256": "c10f6b52ad9dd5ab79d684e73e2a905c16461ac49be5f204ecaec53228ce2fed"
+      }
+    ],
+    "assets": [
+      {
+        "path": "temBERTure/temBERTure_CLS/AdapterBERT_adapter/adapter_config.json",
+        "git_blob_sha1": "9d360ed0a2cd80b2298a75ff5b064b77cc65579a",
+        "size": 1078
+      },
+      {
+        "path": "temBERTure/temBERTure_CLS/AdapterBERT_adapter/pytorch_adapter.bin",
+        "git_blob_sha1": "bdc33c8d3aa3f2d4647ff4d79931dc77f6dae9b6",
+        "size": 15903649
+      },
+      {
+        "path": "temBERTure/temBERTure_CLS/AdapterBERT_head_adapter/head_config.json",
+        "git_blob_sha1": "a5b20cbaf3f9096da3b950807a51a0849b5e4204",
+        "size": 426
+      },
+      {
+        "path": "temBERTure/temBERTure_CLS/AdapterBERT_head_adapter/pytorch_model_head.bin",
+        "git_blob_sha1": "d1113071e28ad15c4afae6345591deed5a1c9d2f",
+        "size": 4204257
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica1/AdapterBERT_adapter/adapter_config.json",
+        "git_blob_sha1": "9d360ed0a2cd80b2298a75ff5b064b77cc65579a",
+        "size": 1078
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica1/AdapterBERT_adapter/pytorch_adapter.bin",
+        "git_blob_sha1": "c76de49e492c76f1d052f10775f92c081b19599e",
+        "size": 15903649
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica1/AdapterBERT_head_adapter/head_config.json",
+        "git_blob_sha1": "6fb1d664e89ffc3570f62a49c3e887b263b08389",
+        "size": 426
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica1/AdapterBERT_head_adapter/pytorch_model_head.bin",
+        "git_blob_sha1": "30734281f39e766cf016b6e8ead18cc48db9d02a",
+        "size": 4204257
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica2/AdapterBERT_adapter/adapter_config.json",
+        "git_blob_sha1": "9d360ed0a2cd80b2298a75ff5b064b77cc65579a",
+        "size": 1078
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica2/AdapterBERT_adapter/pytorch_adapter.bin",
+        "git_blob_sha1": "b5ab7eb349ffd61138e07b7ae7267d2d87e00657",
+        "size": 15903649
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica2/AdapterBERT_head_adapter/head_config.json",
+        "git_blob_sha1": "6fb1d664e89ffc3570f62a49c3e887b263b08389",
+        "size": 426
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica2/AdapterBERT_head_adapter/pytorch_model_head.bin",
+        "git_blob_sha1": "3d85272dc016fe262e1696ef2b3ddd8b093162cd",
+        "size": 4204257
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica3/AdapterBERT_adapter/adapter_config.json",
+        "git_blob_sha1": "9d360ed0a2cd80b2298a75ff5b064b77cc65579a",
+        "size": 1078
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica3/AdapterBERT_adapter/pytorch_adapter.bin",
+        "git_blob_sha1": "9494ad23cca11611e095ed43ec9447067c68d43b",
+        "size": 15903649
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica3/AdapterBERT_head_adapter/head_config.json",
+        "git_blob_sha1": "6fb1d664e89ffc3570f62a49c3e887b263b08389",
+        "size": 426
+      },
+      {
+        "path": "temBERTure/temBERTure_TM/replica3/AdapterBERT_head_adapter/pytorch_model_head.bin",
+        "git_blob_sha1": "18a666968f1e3cac0068c0f5394d52f403e1052e",
+        "size": 4204257
+      }
+    ]
+  },
+  "TemStaPro": {
+    "repository": "ievapudz/TemStaPro",
+    "revision": "9f8ac693ad6db681cf0cdd135b7738a527a3cb92",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENCE.md",
+        "sha256": "1ce1407cd44dc08bf1e9a4bc99d094ac7c0807161fc1934272aa594deaa619db"
+      },
+      {
+        "path": "MLP.py",
+        "sha256": "fdb7769f74cf10a9af50aabf48227af2357f69264da5432878e9cd0b08a56142"
+      },
+      {
+        "path": "README.md",
+        "sha256": "703f150f10e66aea849674e2ae257dbd6592701b6e4635201ff62955b8efe325"
+      },
+      {
+        "path": "data_process.py",
+        "sha256": "665d63f358450d91b36836073becca3fc22f3b21cb4106b9a18daf39e197ae74"
+      },
+      {
+        "path": "model_flow.py",
+        "sha256": "41e8766c0bfeba19a0e3cfb57a12295db926709ed9d7c09fade86d8aa9585c36"
+      },
+      {
+        "path": "prottrans_models.py",
+        "sha256": "64a74255517798c130aa050d4503f78b142668917ecadc74e308950bc262d834"
+      },
+      {
+        "path": "results.py",
+        "sha256": "cc138992fcb182e7599c17d38ee937678c46be2a0e18b79ea8559d87c48106ee"
+      },
+      {
+        "path": "temstapro",
+        "sha256": "36410f2725dd11977da9f798ad7c95cfef693201e984a1ab4c82e5d42fc6e29c"
+      }
+    ],
+    "assets": [
+      {
+        "path": "models/mean_major_imbal-40_s1.pt",
+        "git_blob_sha1": "51a4a1765ee81c794d0b9220d68ca82fc6af4e3a",
+        "size": 3557238
+      },
+      {
+        "path": "models/mean_major_imbal-40_s2.pt",
+        "git_blob_sha1": "214b05a8b26fee2f43af24e85c2aa7f34228dca0",
+        "size": 3557238
+      },
+      {
+        "path": "models/mean_major_imbal-40_s3.pt",
+        "git_blob_sha1": "6b3e46829c471277fb7d57f7336aea39a09c4ebb",
+        "size": 3555906
+      },
+      {
+        "path": "models/mean_major_imbal-40_s4.pt",
+        "git_blob_sha1": "b6417b5c582b4019547106c7cff74e07942256e1",
+        "size": 3556476
+      },
+      {
+        "path": "models/mean_major_imbal-40_s5.pt",
+        "git_blob_sha1": "b6c61f42ca376c5d35d58299492c3b8c6771e9fb",
+        "size": 3556921
+      },
+      {
+        "path": "models/mean_major_imbal-55_s1.pt",
+        "git_blob_sha1": "751a7afc623e228178fbbb0e3868977e07e5f7a9",
+        "size": 3556476
+      },
+      {
+        "path": "models/mean_major_imbal-55_s2.pt",
+        "git_blob_sha1": "bc939d1809043c0ff8d282c96a8b3a1df78b5606",
+        "size": 3555906
+      },
+      {
+        "path": "models/mean_major_imbal-55_s3.pt",
+        "git_blob_sha1": "da22c315a2209fbb281a7fc0ddab7c03b5e474be",
+        "size": 3556159
+      },
+      {
+        "path": "models/mean_major_imbal-55_s4.pt",
+        "git_blob_sha1": "08f3eedeab3919da7f605034b13819cdc27c052a",
+        "size": 3555906
+      },
+      {
+        "path": "models/mean_major_imbal-55_s5.pt",
+        "git_blob_sha1": "128983264f7f9950307cfaf53e6a624e80497e57",
+        "size": 3555906
+      },
+      {
+        "path": "models/mean_major_imbal-65_s1.pt",
+        "git_blob_sha1": "ac99cca8e1cea60c4648da6b3f86e4f6705643e4",
+        "size": 3555525
+      },
+      {
+        "path": "models/mean_major_imbal-65_s2.pt",
+        "git_blob_sha1": "61a6c3cec26a9f63684c8118ae532dd72721260a",
+        "size": 3555525
+      },
+      {
+        "path": "models/mean_major_imbal-65_s3.pt",
+        "git_blob_sha1": "ca31ab5553f1800b2fbb3c957a8ed8c44f81216c",
+        "size": 3555080
+      },
+      {
+        "path": "models/mean_major_imbal-65_s4.pt",
+        "git_blob_sha1": "84bd41acbb56b91e48c4d0226413460fe8c004e1",
+        "size": 3555525
+      },
+      {
+        "path": "models/mean_major_imbal-65_s5.pt",
+        "git_blob_sha1": "7082e2b5cc3fbced94fec58272f4a42a75a9610e",
+        "size": 3555525
+      }
+    ]
+  },
+  "GATSol": {
+    "repository": "binbinbinv/GATSol",
+    "revision": "fe6fb60749c302b2898cf2859418a7b3abbfd7c5",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "2534367fa3635f639f260afcdbe040b56b2511967b6fb05557d05954daeb0321"
+      },
+      {
+        "path": "Predict/tools/Predict.py",
+        "sha256": "79ad05c2142f446f9074ac6194c974a7c51e993046b052e110fcdb844a885c3e"
+      },
+      {
+        "path": "Predict/tools/Predict.sh",
+        "sha256": "712cffda4fe9e1546cad3da517f3166a093f6348a9371753d94616394c55e410"
+      },
+      {
+        "path": "Predict/tools/feature_extract/Protein_parameters_setting.json",
+        "sha256": "9894b4bdcf00eead59a0ffff3ee04aa6e5b1ed2c9111c54dd4c4c04d4eaf46e8"
+      },
+      {
+        "path": "Predict/tools/feature_extract/feature_extra.py",
+        "sha256": "e37308adf8b510fbed85c85278ccc7885ac47f6b610114f6229278f5e78c5543"
+      },
+      {
+        "path": "Predict/tools/pdb_to_cm/pdb_to_cm.py",
+        "sha256": "3757b6f74c1d859eb90bb07b52ce056dd16545cb7c2aa125e26224c623f375a9"
+      },
+      {
+        "path": "Predict/tools/pdb_to_cm/pdb_to_cm.sh",
+        "sha256": "57702fb8376fe518b38e84d3433e12e4476369e18dcf315ee859c2562a3cc506"
+      },
+      {
+        "path": "README.md",
+        "sha256": "91ec62fdf290363d7707da3990ff23f49687bc902902f0d3ec3d4a598e2d07cd"
+      },
+      {
+        "path": "tools/feature_extract/Protein_parameters_setting.json",
+        "sha256": "9894b4bdcf00eead59a0ffff3ee04aa6e5b1ed2c9111c54dd4c4c04d4eaf46e8"
+      },
+      {
+        "path": "tools/feature_extract/feature_extra.py",
+        "sha256": "b10a5f107f7dc0f7ffcf623c04e8e33301f68e752f2e132d744d5b087a3e2fa6"
+      },
+      {
+        "path": "tools/pdb_to_cm/pdb_to_cm.py",
+        "sha256": "3757b6f74c1d859eb90bb07b52ce056dd16545cb7c2aa125e26224c623f375a9"
+      },
+      {
+        "path": "tools/pdb_to_cm/pdb_to_cm.sh",
+        "sha256": "5cc2feccb562e2ef7096e33738455c8893ff66bb2883d1e6ae64e9dd16d38c8c"
+      }
+    ],
+    "assets": []
+  },
+  "EvoEF2": {
+    "repository": "tommyhuangthu/EvoEF2",
+    "revision": "38df01d305ed728ef067c3e0d22072058f33e255",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "0aa00be531f5a017b5ef8f462f2e0292a92f81825e72bd376c9f68a4d9099877"
+      },
+      {
+        "path": "README.md",
+        "sha256": "8d09e693e558a6495149a98d1d533747100f89086c50c7ec54d2e193da351712"
+      },
+      {
+        "path": "VERSION",
+        "sha256": "50223b6a07a7ebe1f2a5c7446a8ecd7369613121200dcc60178ed332cde7f6df"
+      },
+      {
+        "path": "build.sh",
+        "sha256": "55677c185bc109a58c33132d97b22dd9ddbc2614546c3acecc77387001bf03b7"
+      },
+      {
+        "path": "src/Atom.cpp",
+        "sha256": "f87b71afda24999c1a8b65b4a7e55f7472e5a84bfde995bbf9b2599dab9b00ad"
+      },
+      {
+        "path": "src/Atom.h",
+        "sha256": "dac62b39c4d4549f0ba15a2ab9ff44af1b92c4d2bf59ac0d113f2cae8feed53d"
+      },
+      {
+        "path": "src/AtomParamsSet.cpp",
+        "sha256": "05658bb7f5daf79480d38dca1d45d6f280f8559ab42f4faa5bc2f28d54b024b0"
+      },
+      {
+        "path": "src/AtomParamsSet.h",
+        "sha256": "42c2942ae3613aadcc56b3431f3434864b6e04b5ced634d1d8516077eae8fa6d"
+      },
+      {
+        "path": "src/Chain.cpp",
+        "sha256": "29fa4ed6912d63954aba29afad0d6ca3638de9933dc2ae7b821bb926540433b4"
+      },
+      {
+        "path": "src/Chain.h",
+        "sha256": "10ca912a36865bb4f4b387826298b9ffe19461d2de770d637663dcf0127bb665"
+      },
+      {
+        "path": "src/DesignSite.cpp",
+        "sha256": "7b90bf13d2297bbcb1fed3af57cf5d335d80d09058609bfdc8694123f49316f3"
+      },
+      {
+        "path": "src/DesignSite.h",
+        "sha256": "2cb612032d4a918cbb748e9cfb27728b865097b9410d98ce93ccce3d69dd5a98"
+      },
+      {
+        "path": "src/EnergyFunction.cpp",
+        "sha256": "629db7c5054bf82c593b2ea00aa18b4c8dd2c5c3807e6d847d96071bc0ea264b"
+      },
+      {
+        "path": "src/EnergyFunction.h",
+        "sha256": "c6a4002dcafcf7689036aafce7804598bd8c378754f57cf1fa3d0c8c35f1ff7f"
+      },
+      {
+        "path": "src/EnergyMatrix.cpp",
+        "sha256": "5b27d374b84ec7b384a5326d15ee37e8c7f3100c272d0a506c7bac5ddaa50e57"
+      },
+      {
+        "path": "src/EnergyMatrix.h",
+        "sha256": "e20982df84d945bdc95e406cb7b414631597807016e5c33a9da028848361bf2d"
+      },
+      {
+        "path": "src/EnergyOptimization.cpp",
+        "sha256": "5465486204ddff12ac5b0eb3e772c292de9c95f13cd804f92cfdf34ad65ffcbe"
+      },
+      {
+        "path": "src/EnergyOptimization.h",
+        "sha256": "498ece32f46bcd5c67976f801f37fe5ed9b48257f886f44afef2a018b012cab4"
+      },
+      {
+        "path": "src/ErrorTracker.cpp",
+        "sha256": "ef084f4aabc7278d3b96c2375a45ff696016b6436da182160d473979be781179"
+      },
+      {
+        "path": "src/ErrorTracker.h",
+        "sha256": "cae95034a0f77e448351ae57e4525d2dc1b24ac9d6ab9f3ba3ca27e3dd90797a"
+      },
+      {
+        "path": "src/EvoAminoName.cpp",
+        "sha256": "3a091f1c1d2c58c69435c87a5f4f03ba105a593c3e82026eb95ab7defa756db4"
+      },
+      {
+        "path": "src/EvoAminoName.h",
+        "sha256": "651d29237962f2a4fdab9a4952dd45b60a29a39d28961d36d5ed5d64723308b5"
+      },
+      {
+        "path": "src/EvoGetPhiPsi.cpp",
+        "sha256": "d88c12d8858c8ebec29fe980f0170d4ca2f5ae4cd6eda1bd1068f6b30c726159"
+      },
+      {
+        "path": "src/EvoGetPhiPsi.h",
+        "sha256": "090855eb8393ff300e7fb4ae5681c0a7683f7f572188a05aaa00098269de2fcc"
+      },
+      {
+        "path": "src/EvoGetSeq2SA.cpp",
+        "sha256": "651777e3562b386fa5fb6d8d4bed8239c37ea3d6068a7954e2dab7d3802856da"
+      },
+      {
+        "path": "src/EvoGetSeq2SA.h",
+        "sha256": "08170f875c13a5ec2bef70101817346ffda7c877fadb01520992c53da54ce974"
+      },
+      {
+        "path": "src/EvoGetSeq2SS.cpp",
+        "sha256": "567b00958e95e074105ab103928a3610d13c81233cda6dd1aeb69ced260f606a"
+      },
+      {
+        "path": "src/EvoGetSeq2SS.h",
+        "sha256": "eb5d7d29076b12f8e3a0ba1717f254f0a83863b5291183bd35e746f8211a42a6"
+      },
+      {
+        "path": "src/EvoSeqAlign.cpp",
+        "sha256": "39cfa4b43477bb3c2884fc78b69bf3a87145f010dddc4f2129268be73458753c"
+      },
+      {
+        "path": "src/EvoSeqAlign.h",
+        "sha256": "56a8198132c5089eb5e65c7a7c3ae47e1f9a566a0bf1a067f95e76bb537e8aef"
+      },
+      {
+        "path": "src/EvoUtility.cpp",
+        "sha256": "be1ec9fda945b63e2edb686bde1eddefaa303407c64c545acdcf3c10f3047d5f"
+      },
+      {
+        "path": "src/EvoUtility.h",
+        "sha256": "939ef695de79f654c0b69a96d51b631c4167e69bc9611f801b12b5767257ee08"
+      },
+      {
+        "path": "src/Evolution.cpp",
+        "sha256": "1e7d1b410332f3fba4e0ce02db3e648157882ec018fdd3e999cb23eb16faf36e"
+      },
+      {
+        "path": "src/Evolution.h",
+        "sha256": "83c0641eb091b67f9188c0d17fa6e9706498a3b9c2b641e96aa89599bf7dbb95"
+      },
+      {
+        "path": "src/GeometryCalc.cpp",
+        "sha256": "e7f3173ab36e922d836947ba74ae0d0a53de4dbfb1336a8584bf7c31476713be"
+      },
+      {
+        "path": "src/GeometryCalc.h",
+        "sha256": "4e7ab6bbcb03001012f0bfbda31f6a38727726e67506b46fd730760b86d894b4"
+      },
+      {
+        "path": "src/Getopt.cpp",
+        "sha256": "f03fe404151247e064cc5be086a472b29d81309017df4a7fa37e24fbed072550"
+      },
+      {
+        "path": "src/Getopt.h",
+        "sha256": "0a327a56d24ba076c7df77d0bad17f242e6353b0a073d510f0af78afd194dd87"
+      },
+      {
+        "path": "src/Main.cpp",
+        "sha256": "b54e761e82beb623b5f27dc8666c6755f314eab602c23512b612fa86a46a2540"
+      },
+      {
+        "path": "src/ProgramFunction.cpp",
+        "sha256": "2aa249faf554516ff6399bcf259ab01f2592a72f50db9f3015598a816c43cb8a"
+      },
+      {
+        "path": "src/ProgramFunction.h",
+        "sha256": "fdbf21c0a3951ec4835ae051820d618b68c37c97b3578d37829307f155e9cf98"
+      },
+      {
+        "path": "src/Residue.cpp",
+        "sha256": "a1c2efb92ced5addae9bb03c5fea8d789edaa5bc06c314604f143682f5719d9b"
+      },
+      {
+        "path": "src/Residue.h",
+        "sha256": "b74d91dd7913909736b7be60b093eeb088577430b3085d0035e33ae3bccb1cb5"
+      },
+      {
+        "path": "src/ResidueTopology.cpp",
+        "sha256": "f1c38973eddeff7304fe5d39c775e5ec2d8d09ab52711f416079fbbbc1db6292"
+      },
+      {
+        "path": "src/ResidueTopology.h",
+        "sha256": "65b71dd6ea2f2bdf61567d1bb49caba5dc4923453c0deaf83da86335bbdb2e5c"
+      },
+      {
+        "path": "src/Rotamer.cpp",
+        "sha256": "f3c1d3d6f1f85f35a2523adaa9abcac7b468be2d24dd0fe384afaa4cf5834ef2"
+      },
+      {
+        "path": "src/Rotamer.h",
+        "sha256": "b96a5ec2bd8613b98a3f9c13e46175e85fb4e8b362d9e95cb2f9fb1c8c897a5b"
+      },
+      {
+        "path": "src/RotamerBuilder.cpp",
+        "sha256": "906804851ce8ae226fc557b6864645ef7140b00f789f06a31afa0073f5684e7a"
+      },
+      {
+        "path": "src/RotamerBuilder.h",
+        "sha256": "5a6dffaf26314eeed0d9052d5cab73164ddd64835c2770f36d3b0f2ba43dd05b"
+      },
+      {
+        "path": "src/RotamerOptimizer.cpp",
+        "sha256": "de1e42a2d3128bb9628f0db9ccc8cc65166b5a7386f674502eeb09da19f822ce"
+      },
+      {
+        "path": "src/RotamerOptimizer.h",
+        "sha256": "f95091cf4654f682300a0ae54d9774b6f5a722bf36e74b97d4c662447ce9cb5d"
+      },
+      {
+        "path": "src/Sequence.cpp",
+        "sha256": "611801e1f1568df04b8ed4c8e9a8300b238717716bd1bc307c4cd1ee32dffee0"
+      },
+      {
+        "path": "src/Sequence.h",
+        "sha256": "62db833eb12f0132c801869d31e82ef1f962fdede74189f32e9476cf72547be0"
+      },
+      {
+        "path": "src/Structure.cpp",
+        "sha256": "a421e62a0bec2a62bfe7277217938800403f830fb26dc93593812a65fbfd49aa"
+      },
+      {
+        "path": "src/Structure.h",
+        "sha256": "25dc389b7b75906edeabef98c7b4c81fbbf6d305df6daa1197323a2c42f4b493"
+      },
+      {
+        "path": "src/Utility.cpp",
+        "sha256": "265edb418100d71dd6f33229bf12bfe2eb4e7447f580cb73a6c0920adf76e1da"
+      },
+      {
+        "path": "src/Utility.h",
+        "sha256": "692458d550b686767b165e69dee2332ae3c22c90c9a6d237f1e4362e8a574779"
+      },
+      {
+        "path": "src/WeightOpt.cpp",
+        "sha256": "3e6829ccdf0268919d77732784dddf6538272c3c9274e9639543871012fd8f2a"
+      },
+      {
+        "path": "src/WeightOpt.h",
+        "sha256": "67af763abc96fb5d3a6d7d8d75b6543babb6145b9241f5636938d6caa95c347d"
+      }
+    ],
+    "assets": [
+      {
+        "path": "library/aapropensity.txt",
+        "git_blob_sha1": "323be1f234172eb6ae3b3b1b0545d145ff9e15ab",
+        "size": 246511
+      },
+      {
+        "path": "library/dun2010bb.lib",
+        "git_blob_sha1": "a420ed69a33ee215e515f3f30b95bec38b5bb1c0",
+        "size": 92456784
+      },
+      {
+        "path": "library/dun2010bb1per.lib",
+        "git_blob_sha1": "f65d0113ce654cfaa16ad74f4af82704b463c671",
+        "size": 34448288
+      },
+      {
+        "path": "library/dun2010bb3per.lib",
+        "git_blob_sha1": "368e0a605b21a3ef538a2113c925d592d9c53c52",
+        "size": 20552000
+      },
+      {
+        "path": "library/honig11810.lib",
+        "git_blob_sha1": "3bdf1ac99374687ea481e98168fdb98724d80675",
+        "size": 371922
+      },
+      {
+        "path": "library/honig3222.lib",
+        "git_blob_sha1": "e36bdf2c7f19b6048ce3f78da6b46a58761f0d65",
+        "size": 101106
+      },
+      {
+        "path": "library/honig7421.lib",
+        "git_blob_sha1": "263b5640030d676c9de788c17dce7e38c88c9b6b",
+        "size": 228915
+      },
+      {
+        "path": "library/honig984.lib",
+        "git_blob_sha1": "e6af64859cc4fafaf879b16836b9aee3243dcba7",
+        "size": 30793
+      },
+      {
+        "path": "library/param_charmm19_lk.prm",
+        "git_blob_sha1": "b72a4706fac1d44ac037e27baa1893fd3e7b9000",
+        "size": 32284
+      },
+      {
+        "path": "library/param_charmm19_lk_ref2015.prm",
+        "git_blob_sha1": "d9f5b65e5737fa7d11c9e1641ca1e44226b5e698",
+        "size": 32410
+      },
+      {
+        "path": "library/param_charmm22.prm",
+        "git_blob_sha1": "733760a3889892c3baeab566fa836d0130b06bcb",
+        "size": 43256
+      },
+      {
+        "path": "library/ramachandran.txt",
+        "git_blob_sha1": "2da65a6ca162cfad41636942fba0346353cc254a",
+        "size": 246506
+      },
+      {
+        "path": "library/top_all22_prot.inp",
+        "git_blob_sha1": "6ff0c348c326b7ea5d321c3b7584068d33c37478",
+        "size": 83962
+      },
+      {
+        "path": "library/top_polh19_prot.inp",
+        "git_blob_sha1": "c0a8b7f49d85a2b81e845398fddd0fcf75f362ae",
+        "size": 48238
+      }
+    ]
+  }
+}

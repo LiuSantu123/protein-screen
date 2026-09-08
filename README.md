@@ -7,7 +7,20 @@ supported execution platform (POSIX process groups and upstream shell tools).
 
 **[中文使用说明](docs/usage_zh.md)** · **[Model installation and configuration](docs/models.md)**
 
-## Install
+## Fresh cluster installer
+
+```bash
+git clone https://github.com/LiuSantu123/protein-screen.git && bash protein-screen/install.sh --prefix "$HOME/software/protein-screen-runtime"
+```
+
+See [空白集群安装与逐模型权重指引](docs/install_zh.md). This creates isolated
+`screen-core` + `masif` environments, builds EvoEF2, fetches external assets, and
+writes a prefix-specific launcher/config plus a failure report. NetSolP ONNX
+requires the official download package; gated models need upstream access.
+Six permissively licensed source subsets are included in [third_party](third_party/README.md).
+Package checks do not establish nine-model inference acceptance on a new cluster.
+
+## Controller-only install
 
 ```bash
 git clone https://github.com/LiuSantu123/protein-screen.git
@@ -18,8 +31,8 @@ protein-screen --version
 ```
 
 The conda environment installs the **controller, structure parser and result
-readers**. Model repositories, model environments and weights are installed
-separately; they are not bundled. Existing installations can be reused. The default
+readers**. Model environments and weights are installed separately by the fresh installer
+or configured manually; weights are not bundled. Existing installations can be reused. The default
 recipe does not attempt to consolidate upstream model dependencies.
 The recipe runs `pip install -e .`, so run it from the repository root.
 Alternatively, install this package using `pip install .` in Python 3.10.12+.
@@ -31,8 +44,8 @@ It now includes a portable `scripts/screen.sh` launcher, a
 package inventories and explicit APBS binary/shared-library requirements.
 Validation covers public 1UBQ plus 10 private designs across two GPU nodes
 (90/90 model statuses passed after a Pro4S dependency repair and targeted retry).
-See the guide for the validated clone workflow; the bootstrap YAML is not a
-complete or validated fresh installation of all third-party models.
+See the guide for the validated environment-clone workflow. The historical
+bootstrap YAML is an overlay; use `install.sh` for the new fresh-install recipe.
 
 ## Try without model weights
 

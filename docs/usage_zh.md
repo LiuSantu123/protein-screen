@@ -1,5 +1,7 @@
 # 中文使用说明
 
+空白集群请优先使用[一键安装指南](install_zh.md)；本文原有环境配置/迁移方法仍供参考。
+
 Protein Screen 将原来的九模型 screen 脚本整理为可安装、可配置的 CLI/Python 工具。
 输入为 FASTA，可附 PDB/mmCIF；输出为含原始分数、状态、模型覆盖率和排序的 CSV。
 

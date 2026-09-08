@@ -1,3 +1,5 @@
 # PDB uses fixed-width records; retain the original public data bytes.
 *.pdb -text whitespace=-blank-at-eol
 *.csv text whitespace=cr-at-eol
+# Preserve upstream source checksums including CRLF.
+third_party/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

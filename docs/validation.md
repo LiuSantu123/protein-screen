@@ -76,3 +76,33 @@ run or a same-design cross-node reproducibility test. Private inputs and scores
 are not distributed. See [environment report](minimal_environment_zh.md) for
 requirements, numerical comparisons and installation limitations. The original
 v0.1.0 release validation above remains a historical record.
+
+## Fresh-cluster installer validation (2026-09-08)
+
+The new installer was exercised with an existing conda executable and a new,
+isolated prefix: Python 3.10/controller installation, verified EvoEF2 source
+copying, compilation, pinned upstream library import, launcher generation and
+readiness checks succeeded. The public 1UBQ inference returned `evoef2_status=ok`
+and energy **466.33**. GitHub downloads were cached from official pinned archives
+when testing reruns; this is not an offline or cache-free network acceptance test.
+
+A separate new MaSIF conda environment (Python 3.7, APBS 1.5, MSMS 2.6.1) was
+created successfully. The installer-built multivalue reproduced **3.5** at the
+center of a 2×2×2 grid with corner values 0–7. The installer-built Reduce processed
+public 1UBQ and added **630 hydrogens**. These native tests do not establish a
+complete Pro4S surface/inference pass. Legacy pip dependencies and the complete
+modern dependency recipe still require fresh-prefix installation acceptance.
+
+The final conda core recipe resolved successfully; pip resolution against the
+existing compatible core also succeeded without changing it. Cache-free modern
+resolution and the legacy pip installation were stopped during slow package
+downloads; neither is counted as a completed fresh install.
+
+The **23-test** automated suite now includes installer source/hash verification, archive
+asset validation, path/symlink protection, preservation of modified sources,
+resume behavior, GraphBolt patch safety, failure reporting, no-write planning
+and launcher quoting. Shell syntax checks also pass. Miniforge bootstrap without
+an existing conda and a complete fresh nine-model GPU run have **not** been
+validated. The earlier 90/90 result remains evidence for the previous environment,
+not for this new installer. NetSolP ONNX acquisition and any required upstream
+account authorization remain user-supplied steps.

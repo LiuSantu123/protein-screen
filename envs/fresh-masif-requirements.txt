@@ -1,0 +1,10 @@
+# Only MaSIF surface preprocessing; Python 3.7. No TensorFlow network inference.
+numpy==1.18.5
+scipy==1.5.4
+scikit-learn==0.23.2
+biopython==1.76
+networkx==2.5
+ipython==7.34.0
+packaging==23.2
+open3d==0.8.0.0
+# PyMesh 0.3 official Linux cp37 wheel: scripts/install.py downloads/verifies it.
